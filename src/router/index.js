@@ -1,8 +1,8 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 
+import usersPage from '../pages/users.vue'
 import homePage from '../pages/home.vue'
-import petsPage from '../pages/pets.vue'
 
 Vue.use(Router)
 
@@ -11,14 +11,14 @@ const router = new Router ({
   routes: 
   [
     {
+      path: '/users',
+      name: 'users',
+      component: usersPage
+    },
+    {
       path: '/home',
       name: 'home',
       component: homePage
-    },
-    {
-      path: '/pets',
-      name: 'pets',
-      component: petsPage
     }
   ]
 })

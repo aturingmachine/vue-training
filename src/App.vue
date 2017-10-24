@@ -1,5 +1,5 @@
 <template>
-  <v-app class="blue-grey lighten-1">
+  <v-app class='grey lighten-1'>
     <v-navigation-drawer
       persistent
       floating
@@ -8,7 +8,7 @@
       v-model="drawer"
       enable-resize-watcher
       app
-       class="blue-grey lighten-1"
+       class="blue lighten-1"
     >
       <v-list class="blue lighten-2">
         <v-list-tile 
@@ -74,18 +74,18 @@
         drawer: true,
         fixed: true,
         items: [
-          { 
-            icon: 'account_circle',
-            title: 'Users',
+          {
+            icon: 'home',
+            title: 'Home',
             href: '/#/home',
             router: true
           },
-          {
-            icon: 'pets',
-            title: 'Pets',
-            href: '/#/pets',
+          { 
+            icon: 'account_circle',
+            title: 'Users',
+            href: '/#/users',
             router: true
-          }
+          },
         ],
         miniVariant: false,
         right: true,
