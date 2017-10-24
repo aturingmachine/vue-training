@@ -12,6 +12,19 @@
                 <v-card-text>
                   Welcome to the Vue Demo for the UW-Parkside App Factory. This will show how a basic Vue 
                   Single Page Application works. 
+
+                  <br>
+                  <br>
+                  <h6>Data Binding Demo:</h6>
+                  <v-text-field label="Enter a string" v-model="value"></v-text-field>
+                  {{ value }}
+
+                  <v-slider label="Number 1" v-model="num1" thumb-label></v-slider>
+                  num1: {{ num1 }}
+                  <v-slider label="Number 2" v-model="num2" thumb-label></v-slider>
+                  num2: {{ num2 }}
+                  <br>
+                  <h6>Sum = {{ num1 + num2 }}</h6>
                 </v-card-text>
               </v-container>
             </v-card>
@@ -24,6 +37,11 @@
 
 <script>
 export default {
+  data: () => ({
+    value: "",
+    num1: 0,
+    num2: 0
+  })
 
 }
 </script>
