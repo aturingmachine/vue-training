@@ -155,7 +155,7 @@
 </template>
 
 <script>
-import { http } from "../config/http.js";
+import { http } from "../config/http.js"
 
 export default {
   data: () => ({
@@ -166,7 +166,11 @@ export default {
     fail: false,
     callName: "",
     userToEdit: {},
-    newUser: {},
+    newUser: {
+      name: "",
+      email: "",
+      age: 0
+    },
     addDialog: false,
     deleteDialog: false,
     editDialog: false,

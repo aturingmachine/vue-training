@@ -8,39 +8,37 @@
       v-model="drawer"
       enable-resize-watcher
       app
-       class="blue lighten-1"
     >
-      <v-list class="blue lighten-2">
+      <v-list>
         <v-list-tile 
           v-for="(item, i) in items"
           :key="i"
           value="true"
           :href="item.href"
-          class="blue lighten-2"
         >
           <v-list-tile-action>
-            <v-icon class="white--text" v-html="item.icon"></v-icon>
+            <v-icon v-html="item.icon"></v-icon>
           </v-list-tile-action>
           <v-list-tile-content>
-            <v-list-tile-title class="white--text" v-text="item.title"></v-list-tile-title>
+            <v-list-tile-title v-text="item.title"></v-list-tile-title>
           </v-list-tile-content>
         </v-list-tile>
       </v-list>
     </v-navigation-drawer>
 
-    <v-toolbar fixed flat app :clipped-left="clipped" class="blue lighten-1 white--text">
-      <v-toolbar-side-icon class="white--text" @click.stop="drawer = !drawer"></v-toolbar-side-icon>
+    <v-toolbar fixed flat app :clipped-left="clipped">
+      <v-toolbar-side-icon @click.stop="drawer = !drawer"></v-toolbar-side-icon>
       <v-btn 
         icon
         @click.stop="miniVariant = !miniVariant"
       >
-        <v-icon class="white--text" v-html="miniVariant ? 'chevron_right' : 'chevron_left'"></v-icon>
+        <v-icon v-html="miniVariant ? 'chevron_right' : 'chevron_left'"></v-icon>
       </v-btn>
       <v-btn
         icon
         @click.stop="clipped = !clipped"
       >
-        <v-icon class="white--text">web</v-icon>
+        <v-icon>web</v-icon>
       </v-btn>
       
       <v-toolbar-title v-text="title"></v-toolbar-title>
@@ -60,7 +58,7 @@
       </v-content>
     </main>
     
-    <v-footer :fixed="fixed" app class="blue lighten-1 white--text">
+    <v-footer :fixed="fixed" app>
       <span>&copy; 2017</span>
     </v-footer>
   </v-app>
